@@ -32,6 +32,6 @@ class Registration(models.Model):
     )
     student = models.ForeignKey(Student, on_delete = models.CASCADE)
     course = models.ForeignKey(Course, on_delete = models.CASCADE)
-    period = models.CharField(max_length = 1, blank = False, null = False, default = 'M')
+    period = models.CharField(max_length = 1, choices= PERIOD ,blank = False, null = False, default = 'M')
 
 
